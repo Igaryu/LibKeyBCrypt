@@ -30,4 +30,3 @@ t add else:
             print "Errore generico nella creazione del file chiave!!!"
             print "Contattare lo sviluppatore."
             sys.exit(-999)
-
