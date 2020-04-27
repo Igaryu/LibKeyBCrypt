@@ -5,12 +5,12 @@ Perché in Python? Perché io lavoro fondamentalmente in Python e quindi il prob
 
 Le funziono presenti nella libreria sono:
 
-- cls()
-- Allarme()
-- getpassword()
-- CheIfExists(NomeFile)
-- GetKey(NomeFile)
-- GenKeyFile(NomeFile)
+- `cls()`
+- `Allarme()`
+- `getpassword()`
+- `CheIfExists(NomeFile)`
+- `GetKey(NomeFile)``
+- ``GenKeyFile(NomeFile)
 
 ## cls()
 Semplice funzione che, determinato l’ambiente in cui viene eseguito, determina come pulire lo schermo. Sono presenti le possibilità per Linux e MacOSX. Facile implementare quelle per *BSD o Windows
