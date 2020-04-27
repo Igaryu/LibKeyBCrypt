@@ -9,29 +9,29 @@ Le funziono presenti nella libreria sono:
 - `Allarme()`
 - `getpassword()`
 - `CheIfExists(NomeFile)`
-- `GetKey(NomeFile)``
-- ``GenKeyFile(NomeFile)
+- `GetKey(NomeFile)`
+- `GenKeyFile(NomeFile)
 
-## cls()
+## `cls()`
 Semplice funzione che, determinato l’ambiente in cui viene eseguito, determina come pulire lo schermo. Sono presenti le possibilità per Linux e MacOSX. Facile implementare quelle per *BSD o Windows
 
-## Allarme()
+## `Allarme()`
 Semplice funzione per attirare l’attenzione dell’utente.
 
-## getpasswd()
+## `getpasswd()`
 Funzione che riceve una password da tastiera **oscurandola**.
 
-## CheckIfExsists(NomeFile)
+## `CheckIfExsists(NomeFile)`
 Tramite chiamata alla libreria di sistema `os` verifica se ***NomeFile*** esista o meno.
 
 
-## GetKey(NomeFile)
+## `GetKey(NomeFile)`
 Legge la chiave bcrypt da ***NomeFile*** e la confronta con l’input dell’utente: se l’input dell’utente **corrisponde alla chiave**, quest’ultima viene restituita dalla funzione al chiamante; altrimenti viene ritornato al chiamante la stringa ‘Password errata!!’
 
-## GenKeyFile(NomeFile)
-L’utente deve dare in input la password che vuole configurare. Se la password è minore in lunghezza di 8 caratteri non viene accettata e viene restituito al chiamante il valore -2
-Se la password è di 8 o più caratteri, viene creato, o sovrascritto, un ***NomeFile*** contenente una chiave generata da `bcrypt` per il successivo confronto durante gli accesi, e alla fine, viene chiuso il file.
+## `GenKeyFile(NomeFile)`
+L’utente deve dare in input la password che vuole configurare. **Se la password è minore in lunghezza di 8 caratteri** non viene accettata, e viene restituito al chiamante il valore -2
+**Se la password è di 8 o più caratteri**, viene creato, o sovrascritto, un ***NomeFile*** contenente una chiave generata da `bcrypt` per il successivo confronto durante gli accesi, e alla fine, viene chiuso il file.
 Viene tornato al chiamante il valore 0 (zero)
 
-Ultima edizione di questo file 25/11/2019
+Ultima edizione di questo file 27/04/2020
 
