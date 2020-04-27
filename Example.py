@@ -11,7 +11,7 @@ if ChekIfExists(fname):
     ChiaveInChiaro=GetKey(fname)
     print ChiaveInChiaro
     sys.exit
-else:
+t add else:
     print  "File "+ fname + " NON esiste!!"
     SiNo="z"
     while (SiNo not in "SN"):
@@ -30,3 +30,4 @@ else:
             print "Errore generico nella creazione del file chiave!!!"
             print "Contattare lo sviluppatore."
             sys.exit(-999)
+
