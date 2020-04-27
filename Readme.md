@@ -1,0 +1,37 @@
+# LibKeyBcrypt ReadMe file
+Questa libreria è stata creata per rispondere ad una esigenza specifica, che sicuramente sarà occorsa a più di uno di voi, nel passare del tempo e lo sviluppo delle vostre applicazioni. La libreria è in Versione 1.0
+
+Perché in Python? Perché io lavoro fondamentalmente in Python e quindi il problema mi si poneva in questo linguaggio. Nulla vieta a nessuno di modificarlo per trasportarlo in altri linguaggi che meglio conoscono.
+
+Le funziono presenti nella libreria sono:
+
+- cls()
+- Allarme()
+- getpassword()
+- CheIfExists(NomeFile)
+- GetKey(NomeFile)
+- GenKeyFile(NomeFile)
+
+## cls()
+Semplice funzione che, determinato l’ambiente in cui viene eseguito, determina come pulire lo schermo. Sono presenti le possibilità per Linux e MacOSX. Facile implementare quelle per *BSD o Windows
+
+## Allarme()
+Semplice funzione per attirare l’attenzione dell’utente.
+
+## getpasswd()
+Funzione che riceve una password da tastiera **oscurandola**.
+
+## CheckIfExsists(NomeFile)
+Tramite chiamata alla libreria di sistema `os` verifica se ***NomeFile*** esista o meno.
+
+
+## GetKey(NomeFile)
+Legge la chiave bcrypt da ***NomeFile*** e la confronta con l’input dell’utente: se l’input dell’utente **corrisponde alla chiave**, quest’ultima viene restituita dalla funzione al chiamante; altrimenti viene ritornato al chiamante la stringa ‘Password errata!!’
+
+## GenKeyFile(NomeFile)
+L’utente deve dare in input la password che vuole configurare. Se la password è minore in lunghezza di 8 caratteri non viene accettata e viene restituito al chiamante il valore -2
+Se la password è di 8 o più caratteri, viene creato, o sovrascritto, un ***NomeFile*** contenente una chiave generata da `bcrypt` per il successivo confronto durante gli accesi, e alla fine, viene chiuso il file.
+Viene tornato al chiamante il valore 0 (zero)
+
+Ultima edizione di questo file 25/11/2019
+
