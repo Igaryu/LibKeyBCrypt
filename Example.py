@@ -11,7 +11,7 @@ if ChekIfExists(fname):
     ChiaveInChiaro=GetKey(fname)
     print ChiaveInChiaro
     sys.exit
-t add else:
+else:
     print  "File "+ fname + " NON esiste!!"
     SiNo="z"
     while (SiNo not in "SN"):
