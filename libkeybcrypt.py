@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 import sys,os,getpass
 
@@ -9,7 +10,7 @@ def cls():
 		os.system('cls')
 
 def Allarme(n):
-    print (n * chr(7))
+    print((n * chr(7)))
 
 #
 # Verifica della presdenza del modulo python-bcrypt. Deve essere presente perché se ne usano 
@@ -21,13 +22,13 @@ try:
     import bcrypt
 except ImportError:
         Allarme(5)
-        print "\n\n*** Attenzione !!!"
-        print "------------------\n"
-        print "\tPer poter utilizzare questa libreria devi avere installato il modulo brcypt"
-        print "\tDa un analisi del tuo sistema non riuslta essere installato!!\n"
-        print "\tPer installarlo in Debian, o derivate, o in MacOSX, esegui il seguente comando:\n"
-        print "\t\tpip install python-bcrypt.\n" 
-        print "\tDopo l'installazione rilancia il programma.\n"
+        print("\n\n*** Attenzione !!!")
+        print("------------------\n")
+        print("\tPer poter utilizzare questa libreria devi avere installato il modulo brcypt")
+        print("\tDa un analisi del tuo sistema non riuslta essere installato!!\n")
+        print("\tPer installarlo in Debian, o derivate, o in MacOSX, esegui il seguente comando:\n")
+        print("\t\tpip install python-bcrypt.\n") 
+        print("\tDopo l'installazione rilancia il programma.\n")
         sys.exit(-9)
 
 #
@@ -42,11 +43,11 @@ def getpasswd():
         passwd=getpass.getpass('Password: ')
         if len(passwd)==0:
            Allarme(4)
-           print "Attenzione: password non può essere nulla!!!"
+           print("Attenzione: password non può essere nulla!!!")
            return -1
         elif len(passwd)<8:
            Allarme(4)
-           print "Attenzione: password non può essere di lunghezza inferiore ad 8 caratteri!!!"
+           print("Attenzione: password non può essere di lunghezza inferiore ad 8 caratteri!!!")
            return -1
 
         else:    
@@ -92,7 +93,7 @@ def GenKeyFile(NomeFile):
     ChiaveInChiaro=getpass.getpass("Digita password principale per l'accesso generale: ").encode('utf-8')
     if len(ChiaveInChiaro)<8:
         Allarme(2)
-        print "La password non puo essere minore di 8 caratteri!!!"
+        print("La password non puo essere minore di 8 caratteri!!!")
         return(-2)
     else:
         fp=open(NomeFile,"w")
